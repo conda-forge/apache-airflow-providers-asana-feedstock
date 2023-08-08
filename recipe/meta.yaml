@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - apache-airflow >=2.4.0
-    - python-asana >=0.10
+    - python-asana >=0.10,<4.0.0
 
 test:
   imports:

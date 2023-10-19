@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-asana" %}
-{% set version = "2.2.2" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-asana-{{ version }}.tar.gz
-  sha256: 24d5c4083871fb00e25b863217ead382e2f03e6ca403fe7a9d4ad2277e0d76fd
+  sha256: ef6e108ff49cb89b3ed1e3b67a546a475a98db4a3cce2ac12be72bddb0fb35e3
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.4.0
+    - apache-airflow >=2.5.0
     - python-asana >=0.10,<4.0.0
 
 test:

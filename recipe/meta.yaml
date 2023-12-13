@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-asana" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-asana-{{ version }}.tar.gz
-  sha256: ef6e108ff49cb89b3ed1e3b67a546a475a98db4a3cce2ac12be72bddb0fb35e3
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 7192eafe2b2857743e69fa1457b118c4ab75cde970306c721c363cce0abfcaa9
 
 build:
   noarch: python
@@ -16,30 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
     - python-asana >=0.10,<4.0.0
 
 test:
   imports:
     - airflow.providers.asana
-    - airflow.providers.asana.hooks
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-asana package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-asana for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/asana/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-asana/stable/index.html
   dev_url: https://github.com/apache/airflow/

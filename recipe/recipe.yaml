@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-asana
-  version: "2.11.2"
+  version: "2.11.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_asana-${{ version }}.tar.gz
-  sha256: a1cd51f85939818f99165d256bc499bd1575f3730504045e91a01187598ba1ae
+  sha256: 2c9439baf72a72ca09b7c65d0f086ad0a1b1f6cac198863b2fd9501e291204ed
 
 build:
   noarch: python

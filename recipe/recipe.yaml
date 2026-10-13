@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-asana
-  version: "2.12.0"
+  version: "2.12.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_asana-${{ version }}.tar.gz
-  sha256: 63bfa748452a29c30cab14d341bed532a5c82ae3ac29f0131c7dcdd17c3293a9
+  sha256: e2baef93f7557649f1147b6460b7082e69d8351f68b3c03f40c7498f70b56531
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
